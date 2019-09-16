@@ -3,29 +3,29 @@ package lexer
 import "github.com/sladyn98/GoInterpret/token"
 
 type Lexer struct {
-	 input 			string
-	 position		int			//current position in input
-	 readPosition	int			//current readingPosition in input(After current input)
-	 ch 			byte		//current char under examination
+	input        string
+	position     int  //current position in input
+	readPosition int  //current readingPosition in input(After current input)
+	ch           byte //current char under examination
 }
 
-func New(input string) *Lexer{
-	l := &Lexer{input:input}
+func New(input string) *Lexer {
+	l := &Lexer{input: input}
 	l.readChar()
 	return l
 }
 
-func (l *Lexer) readChar(){
+func (l *Lexer) readChar() {
 	if l.readPosition >= len(l.input) {
 		l.ch = 0
 	} else {
 		l.ch = l.input[l.readPosition]
 	}
 	l.position = l.readPosition
-	l.readPosition+=1
+	l.readPosition += 1
 }
 
-func (l *Lexer) NextToken() token.Token{
+func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 
 	switch l.ch {
@@ -60,11 +60,11 @@ func (l *Lexer) NextToken() token.Token{
 
 	l.readChar()
 	return tok
-	}
+}
 
-    func newToken (tokenType token.TokenType, ch byte) token.Token {
-    	return token.Token{
-    		Type	:tokenType,
-    		Literal	:string(ch),
-		}
+func newToken(tokenType token.TokenType, ch byte) token.Token {
+	return token.Token{
+		Type:    tokenType,
+		Literal: string(ch),
+	}
 }
