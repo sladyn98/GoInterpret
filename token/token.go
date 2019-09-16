@@ -11,17 +11,17 @@ type Token struct {
 
 //Used to define the set of constants.
 const (
-	ILLEGAL = "ILLEGAL"
-	EOF     = "EOF"
-	IDENT = "IDENT"
-	INT   = "INT"
-	ASSIGN = "="
-	PLUS   = "+"
+	ILLEGAL   = "ILLEGAL"
+	EOF       = "EOF"
+	IDENT     = "IDENT"
+	INT       = "INT"
+	ASSIGN    = "="
+	PLUS      = "+"
 	COMMA     = ","
 	SEMICOLON = ";"
-	LPAREN = "("
-	RPAREN = ")"
-	LBRACE = "{"
-	RBRACE = "}"
-	FUNCTION = "FUNCTION"
+	LPAREN    = "("
+	RPAREN    = ")"
+	LBRACE    = "{"
+	RBRACE    = "}"
+	FUNCTION  = "FUNCTION"
 )
