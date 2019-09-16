@@ -8,7 +8,6 @@ type Token struct {
 }
 
 const (
-
 	ILLEGAL = "ILLEGAL"
 	EOF 	= "EOF"
 
@@ -31,5 +30,4 @@ const (
 
 	//Keywords
 	FUNCTION   	= "FUNCTION"
-
 )
