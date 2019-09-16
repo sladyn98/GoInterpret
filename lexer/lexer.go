@@ -2,6 +2,7 @@ package lexer
 
 import "github.com/sladyn98/GoInterpret/token"
 
+//Lexer defines the structure for the lexer.
 type Lexer struct {
 	input        string
 	position     int  //current position in input
@@ -9,6 +10,7 @@ type Lexer struct {
 	ch           byte //current char under examination
 }
 
+//New initiates the parsing action.
 func New(input string) *Lexer {
 	l := &Lexer{input: input}
 	l.readChar()
