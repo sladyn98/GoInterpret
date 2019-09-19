@@ -5,3 +5,7 @@
 
 This is a side-project built in golang which follows the book
 `Writing an interpreter in go`.
+
+Core components:
+
+  a) Lexer || b) Parser
